@@ -1,4 +1,4 @@
-package com.company.TestingClasses;
+package com.company.Connection;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 

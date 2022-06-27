@@ -1,5 +1,6 @@
 package com.company.TestingClasses;
 
+import com.company.Connection.ConnectionFactory;
 import com.company.DAOS.ProductDAO;
 import com.company.SampleObjects.Product;
 

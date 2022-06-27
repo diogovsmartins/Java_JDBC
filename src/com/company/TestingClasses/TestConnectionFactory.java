@@ -1,5 +1,7 @@
 package com.company.TestingClasses;
 
+import com.company.Connection.ConnectionFactory;
+
 import java.sql.Connection;
 import java.sql.SQLException;
 

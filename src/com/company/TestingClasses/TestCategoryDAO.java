@@ -1,8 +1,8 @@
 package com.company.TestingClasses;
 
+import com.company.Connection.ConnectionFactory;
 import com.company.DAOS.CategoryDAO;
 import com.company.SampleObjects.Category;
-import com.company.SampleObjects.Product;
 
 import java.sql.Connection;
 import java.sql.SQLException;

@@ -2,7 +2,7 @@ package com.company.TestingClasses;
 
 import java.sql.*;
 
-public class TestInsertion_protected {
+public class TestInsertionProtected {
     public static void main(String[] args) throws SQLException {
         /*
         Utilizar o preparedStatement quando for receber algum dado que será digitado por alguem mais de uma vez
@@ -11,8 +11,8 @@ public class TestInsertion_protected {
         ou algum caracter reservado do BD garantindo que a aplicação não quebre por um erro de digitação ou SQL Injection.
         */
 
-        ConnectionFactory newCon=new ConnectionFactory();
-        try(Connection connection=newCon.createConnection()) {
+        ConnectionFactory newCon = new ConnectionFactory();
+        try (Connection connection = newCon.createConnection()) {
             connection.setAutoCommit(false);
             //setAutoCommit pra false pra poder controlar melhor as transações entre a aplicação e o banco de dados
 
@@ -30,7 +30,7 @@ public class TestInsertion_protected {
         }
     }
 
-    private static void addVariable(String nome, String descricao,  PreparedStatement pst) throws SQLException {
+    private static void addVariable(String nome, String descricao, PreparedStatement pst) throws SQLException {
         pst.setString(1, nome);
         pst.setString(2, descricao);
 
@@ -39,10 +39,10 @@ public class TestInsertion_protected {
 //        }
 
         pst.execute();
-        try(ResultSet rst= pst.getGeneratedKeys()){
-            while(rst.next()){
-                int id=rst.getInt(1);
-                System.out.println("Created ID: "+id);
+        try (ResultSet rst = pst.getGeneratedKeys()) {
+            while (rst.next()) {
+                int id = rst.getInt(1);
+                System.out.println("Created ID: " + id);
             }
         }
     }

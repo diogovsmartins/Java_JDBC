@@ -18,9 +18,9 @@ public class TestConnection {
         pro build path do projeto.
 
         */
-        String urlCon="jdbc:mysql://localhost/LojaVirtual?useTimezone=true&serverTimezone=UTC";
+        String urlCon = "jdbc:mysql://localhost/LojaVirtual?useTimezone=true&serverTimezone=UTC";
 
-        Connection connection= DriverManager
+        Connection connection = DriverManager
                 .getConnection(urlCon, "root", "1234");
 
         System.out.println("Closing connection.");

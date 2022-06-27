@@ -7,17 +7,18 @@ public class Category {
 
     private int id;
     private String name;
-    private List<Product> productList=new ArrayList<>();
+    private List<Product> productList = new ArrayList<>();
 
-    public Category(int id, String name){
-        this.id=id;
-        this.name=name;
+    public Category(int id, String name) {
+        this.id = id;
+        this.name = name;
     }
 
     public String getName() {
         return name;
     }
-    public void add(Product product){
+
+    public void add(Product product) {
         productList.add(product);
     }
 

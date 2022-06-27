@@ -1,9 +1,9 @@
 package com.company.TestingClasses;
+
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class ConnectionFactory {
@@ -14,16 +14,16 @@ public class ConnectionFactory {
     propriamente dita, fazendo com que seja mais fácil de refatorar e mudar coisas como por exemplo o usuário ou a senha
     ou conectar em outros bancos de dados.
     */
-    private final String urlCon="jdbc:mysql://localhost/LojaVirtual?useTimezone=true&serverTimezone=UTC";
+    private final String urlCon = "jdbc:mysql://localhost/LojaVirtual?useTimezone=true&serverTimezone=UTC";
     private DataSource dataSource;
 
-    public ConnectionFactory(){
-        ComboPooledDataSource comboPooledDataSource=new ComboPooledDataSource();
+    public ConnectionFactory() {
+        ComboPooledDataSource comboPooledDataSource = new ComboPooledDataSource();
         comboPooledDataSource.setJdbcUrl(urlCon);
         comboPooledDataSource.setUser("root");
         comboPooledDataSource.setPassword("1234");
         comboPooledDataSource.setMaxPoolSize(15);
-        this.dataSource=comboPooledDataSource;
+        this.dataSource = comboPooledDataSource;
     }
 
     public Connection createConnection() throws SQLException {

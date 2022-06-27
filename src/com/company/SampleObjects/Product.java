@@ -6,16 +6,16 @@ public class Product {
     private String name;
     private String description;
 
-    public Product(String name, String description){
-        this.name=name;
-        this.description=description;
-    }
-    public Product(int id, String name, String description){
-        this.id=id;
-        this.name=name;
-        this.description=description;
+    public Product(String name, String description) {
+        this.name = name;
+        this.description = description;
     }
 
+    public Product(int id, String name, String description) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+    }
 
 
     public String getDescription() {
@@ -32,7 +32,7 @@ public class Product {
 
     @Override
     public String toString() {
-      return String.format("Item info: %d, %s, %s",id,name,description);
+        return String.format("Item info: %d, %s, %s", id, name, description);
     }
 
 

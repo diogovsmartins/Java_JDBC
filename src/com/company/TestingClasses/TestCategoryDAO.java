@@ -15,9 +15,9 @@ public class TestCategoryDAO {
             List<Category> categoryList = categoryDAO.listCategoriesWithProducts();
 
             categoryList.stream().forEach(ct -> {
-                        System.out.println("Category: "+ct.getName());
-                for (Product product: ct.getProducts()){
-                    System.out.println(ct.getName()+"="+product.getName());
+                System.out.println("Category: " + ct.getName());
+                for (Product product : ct.getProducts()) {
+                    System.out.println(ct.getName() + "=" + product.getName());
                 }
             });
         }

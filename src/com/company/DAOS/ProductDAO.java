@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProductDAO {
-    /*DAO (Data Access Objectt) é um project pattern de uma classe que tem o trabalho de acessar os dados de um objeto e salva-lo
+    /*DAO (Data Access Object) é um project pattern de uma classe que tem o trabalho de acessar os dados de um objeto e salva-lo
      * no banco de dados, é bem util para reduzir a reescrita de código e também porque desacopla um pouco
      * mais o código e fica facil refatorar caso seja preciso mudar ou implementar algo.*/
 

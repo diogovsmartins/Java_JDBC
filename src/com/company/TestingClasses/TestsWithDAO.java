@@ -11,7 +11,7 @@ public class TestsWithDAO {
     public static void main(String[] args) throws SQLException {
         /*Exemplo de implementação do DAO, bem mais legivel, facil de entender e bem menos código repetido*/
 
-        Product product = new Product("Mesa", "Mesa 4 lugares");
+        Product product = new Product("Cadeira gamer", "Cadeira Gamer RGB LED Gamer muito massa mesmo Xd");
 
         try (Connection connection = new ConnectionFactory().createConnection()) {
             ProductDAO productDAO = new ProductDAO(connection);
